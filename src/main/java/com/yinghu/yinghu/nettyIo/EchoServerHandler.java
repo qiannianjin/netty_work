@@ -1,10 +1,8 @@
 package com.yinghu.yinghu.nettyIo;
 
 import io.netty.buffer.ByteBuf;
-import io.netty.channel.Channel;
-import io.netty.channel.ChannelHandler;
-import io.netty.channel.ChannelHandlerContext;
-import io.netty.channel.ChannelInboundHandlerAdapter;
+import io.netty.buffer.Unpooled;
+import io.netty.channel.*;
 import io.netty.util.CharsetUtil;
 
 /**
@@ -23,11 +21,23 @@ public class EchoServerHandler extends ChannelInboundHandlerAdapter {
         System.out.println(
                 in.toString(CharsetUtil.UTF_8)
         );
+        ctx.write(in);
+
+    }
+
+    @Override
+    public void channelReadComplete(ChannelHandlerContext ctx){
+
+        ctx.writeAndFlush(Unpooled.EMPTY_BUFFER).addListener(ChannelFutureListener.CLOSE);
 
 
     }
 
+    public void exceptionCaught (ChannelHandlerContext ctx,Throwable cause){
 
+        cause.printStackTrace();
+        ctx.close();
+    }
 
 
 }

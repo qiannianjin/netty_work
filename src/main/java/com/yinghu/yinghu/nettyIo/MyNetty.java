@@ -20,7 +20,7 @@ public class MyNetty {
 
         ServerSocket serverSocket = new ServerSocket(8888);
         Socket socket = serverSocket.accept();
-        // BufferedReader bufferedReader=new BufferedReader();
+//        BufferedReader bufferedReader=new BufferedReader();
 //        Channel channel = new ServerSocketChannel();
 //        Channel channel1= new SocketChannel();
 

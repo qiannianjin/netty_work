@@ -37,6 +37,8 @@ public class EchoServer {
 
     }
 
+
+
     public void start()throws Exception{
         final EchoServerHandler serverHandler = new EchoServerHandler();
         EventLoopGroup group = new NioEventLoopGroup();
@@ -59,13 +61,6 @@ public class EchoServer {
 
     }
 
-
-
     }
-
-
-
-
-
 
 }

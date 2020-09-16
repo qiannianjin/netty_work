@@ -36,8 +36,6 @@ public class EchoClient {
                         .handler(new ChannelInitializer<SocketChannel>() {
 
                             public void initChannel(SocketChannel ch)throws Exception{
-
-
                                 ch.pipeline().addLast(
                                         new EchoClientHandler()
                                 );

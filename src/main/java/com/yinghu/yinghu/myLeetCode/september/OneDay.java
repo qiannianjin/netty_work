@@ -1,6 +1,4 @@
-package com.yinghu.yinghu.myLeetCode.day1;
-
-import java.util.zip.ZipEntry;
+package com.yinghu.yinghu.myLeetCode.september;
 
 /**
  * @author
@@ -76,21 +74,16 @@ public class OneDay {
                 }else if(i-1<0){
 
                     //顺序匹配字母列表，取值找到那个和前后字母都不同的字母
-
-
-
                     for(int k=0;k<26;k++){
                         if(chars.length==1){
                             chars[i]='a';
                             break;
                         }
-
                         if(check[k]!=chars[i+1]){
 
                             chars[i]=check[k];
                             break;
                         }
-
 
                     }
 
@@ -103,6 +96,7 @@ public class OneDay {
                         if(check[k]!=chars[i-1]){
 
                             chars[i]=check[k];
+
                             break;
                         }
                     }

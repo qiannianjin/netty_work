@@ -1,5 +1,8 @@
 package com.yinghu.yinghu.myLeetCode.september;
 
+import java.util.LinkedList;
+import java.util.Queue;
+
 /**
  * @author
  * @describetion ${}
@@ -18,14 +21,18 @@ public class Day2 {
     public boolean isTransformable(String s, String t) {
 
 
+        //先判断排序顺序
+
+        //再
+
 
         //判断如果两个同时一模一样
         if(s.equals(t)){
             return false;
-
         }
 
         //先判断两个字符串是不是全部元素都同时有
+
         char[] k=s.toCharArray();
         char[] b=t.toCharArray();
         boolean result=false;
@@ -47,6 +54,44 @@ public class Day2 {
 
         return true;
     }
+
+
+
+    public boolean newRransform(String s, String t){
+
+
+
+
+        int n = s.length();
+        Queue<Integer>[] pos = new Queue[10];
+        for (int i = 0; i < 10; ++i) {
+            pos[i] = new LinkedList<Integer>();
+        }
+        for (int i = 0; i < n; ++i) {
+            pos[s.charAt(i) - '0'].offer(i);
+        }
+
+        for (int i = 0; i < n; ++i) {
+            int digit = t.charAt(i) - '0';
+            if (pos[digit].isEmpty()) {
+                return false;
+            }
+
+            for (int j = 0; j < digit; ++j) {
+                if (!pos[j].isEmpty() && pos[j].peek() < pos[digit].peek()) {
+                    return false;
+                }
+            }
+
+            pos[digit].poll();
+        }
+        return true;
+
+
+
+
+    }
+
 
 
 

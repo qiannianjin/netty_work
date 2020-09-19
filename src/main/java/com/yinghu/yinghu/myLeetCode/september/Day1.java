@@ -5,7 +5,7 @@ package com.yinghu.yinghu.myLeetCode.september;
  * @describetion ${}
  * @date 2020-9-16
  */
-public class OneDay {
+public class Day1 {
 
     //矩阵置换
 
@@ -115,14 +115,15 @@ public class OneDay {
 
     public static void main(String[] args) {
 //
-     OneDay oneDay = new OneDay();
-//
+            Day1 oneDay = new Day1();
+
 //        int[][] k= oneDay.transpose(null);
-//
 //        System.out.println(k);
+
             String k=oneDay.modifyString("??yw?ipkj?");
-        System.out.println(k);
-//
+            System.out.println(k);
+
+
 //        int[][] c=new int[3][2];
 //        System.out.println(c.length);
 //        System.out.println(c[0].length);

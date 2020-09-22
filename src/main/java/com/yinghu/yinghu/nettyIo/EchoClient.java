@@ -35,9 +35,11 @@ public class EchoClient {
                         .remoteAddress(new InetSocketAddress(host,port))
                         .handler(new ChannelInitializer<SocketChannel>() {
 
+                            @Override
                             public void initChannel(SocketChannel ch)throws Exception{
                                 ch.pipeline().addLast(
                                         new EchoClientHandler()
+
                                 );
 
                             }
@@ -55,15 +57,18 @@ public class EchoClient {
         }
 
     public static void main(String[] args) throws Exception{
-        if (args.length != 2) {
+
+            if (args.length != 2) {
             System.err.println(
                     "Usage:"+EchoClient.class.getSimpleName()+"<host><port>"
             );
             return;
         }
+
         String host = args[0];
         int port = Integer.parseInt(args[1]);
         new EchoClient(host,port).start();
+
 
     }
     }

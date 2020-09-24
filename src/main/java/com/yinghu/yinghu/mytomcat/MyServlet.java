@@ -17,14 +17,6 @@ public class MyServlet extends HttpServlet {
 
 
 
-
-
-
-
-
-
-
-
             try{
                 httpServletResponse.getWriter().append("ccc");
 

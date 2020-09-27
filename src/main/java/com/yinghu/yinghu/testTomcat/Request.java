@@ -1,7 +1,6 @@
 package com.yinghu.yinghu.testTomcat;
 
 import io.netty.channel.ChannelHandlerContext;
-import io.netty.handler.codec.AsciiString;
 import io.netty.handler.codec.http.HttpRequest;
 
 /**
@@ -26,7 +25,7 @@ public class Request {
         return this.httpRequest.uri();
     }
 
-    public AsciiString getMethod() {
+    public String getMethod() {
         return httpRequest.method().name();
     }
 

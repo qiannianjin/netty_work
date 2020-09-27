@@ -37,12 +37,7 @@ public class NettyOioServer {
                     //.localAddress(new InetSocketAddress(port))
                     //.childHandler(new ChannelInitializer<>() {
                     //}
-
-
                    // );
-
-
-
         } catch (Exception e) {
 
 

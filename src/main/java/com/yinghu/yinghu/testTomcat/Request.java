@@ -26,7 +26,7 @@ public class Request {
     }
 
     public String getMethod() {
-        return httpRequest.method().name();
+        return  httpRequest.method().name().toString();
     }
 
 

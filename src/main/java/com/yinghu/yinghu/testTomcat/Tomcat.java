@@ -92,18 +92,16 @@ public class Tomcat {
             bootstrap.group(bossGroup, workerGroup)
                     //主线程处理类， 底层使用反射
                     .channel(NioServerSocketChannel.class)
-// 子线程处理类
+                    // 子线程处理类
                     .childHandler(new ChannelInitializer<SocketChannel>() {
                         @Override
                         protected void initChannel(SocketChannel socketChannel) throws Exception {
                             // 无锁化串行编程
                             // Netty 对Http协议的封装,顺序有要求
-// HttpResponseEncoder 编码器
+                            // HttpResponseEncoder 编码器
                             socketChannel.pipeline().addLast(new HttpResponseEncoder());
                             //HttpRequestDecoder 解码器
                             socketChannel.pipeline().addLast(new HttpRequestDecoder());
-
-
                             //  业务处理类
                             socketChannel.pipeline().addLast(new TomcatHandler(servletMap));
                         }
@@ -112,9 +110,7 @@ public class Tomcat {
                     .option(ChannelOption.SO_BACKLOG, 128)
                     //针对子线程的配置, 保持长连接
                     .childOption(ChannelOption.SO_KEEPALIVE, true);
-
             // 启动服务区
-
             ChannelFuture channelFuture = bootstrap.bind(port).sync();
             System.out.println("Tomcat 启动成功, 端口号为: " + this.port);
             channelFuture.channel().closeFuture().sync();

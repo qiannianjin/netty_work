@@ -16,7 +16,6 @@ import java.util.Map;
  */
 public class TomcatHandler extends ChannelInboundHandlerAdapter {
 
-
     private Map<String, Servlet> servletMap = null;
 
     public TomcatHandler(Map<String, Servlet> servletMap) {

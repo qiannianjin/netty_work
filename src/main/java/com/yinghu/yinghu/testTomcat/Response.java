@@ -44,6 +44,7 @@ public class Response {
 //                // 设置连接内容为长连接
 //                response.headers().set(CONNECTION, HttpHeaderValues.KEEP_ALIVE);
 //            }
+
             chc.write(response);
             chc.flush();
         } finally {

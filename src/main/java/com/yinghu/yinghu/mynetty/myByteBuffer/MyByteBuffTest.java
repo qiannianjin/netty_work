@@ -1,8 +1,12 @@
 package com.yinghu.yinghu.mynetty.myByteBuffer;
 
 import io.netty.buffer.ByteBuf;
-import io.netty.buffer.Unpooled;
+import io.netty.channel.Channel;
+import io.netty.channel.ChannelFuture;
+import io.netty.channel.EventLoopGroup;
 import org.apache.tomcat.util.http.fileupload.UploadContext;
+
+import java.net.Socket;
 
 /**
  * @author
@@ -16,17 +20,28 @@ public class MyByteBuffTest {
 //
 //
 //}
-
+    //控制流，多线程处理，并发
+    EventLoopGroup eventLoopGroup ;
+    //socket
+    Channel channel;
+    //异步通知
+    ChannelFuture channelFuture;
 
     public static void main(String[] args) {
 
+
+ //       Socket socket=
+
+
+        Integer bi;
+
+
 //    ByteBuf byteBuf=new ByteBuf() {
+//
+//
+//
 //    }
 
-
-
-        ByteBuf byteBuf= Unpooled.buffer();
-        System.out.println(byteBuf.toString());
 
     }
 

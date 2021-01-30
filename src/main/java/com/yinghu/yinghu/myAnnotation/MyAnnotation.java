@@ -11,14 +11,15 @@ import java.lang.annotation.Target;
  * @date 2020-9-22
  */
 
-
 @Target(ElementType.FIELD)
 @Retention(RetentionPolicy.RUNTIME)
 public @interface MyAnnotation {
 
 String message();
 
-
 }
 //异常，在规划的范围之外的情况，称之为异常
 //ssl证书如何实现
+
+
+

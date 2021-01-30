@@ -72,7 +72,6 @@ public class One {
         for (int i=length/2-1;i>=0;i--)
             heapify(array,length,i);
 
-
     }
 
     private static void heapify(int[] array, int length, int i) {
@@ -91,8 +90,6 @@ public class One {
             heapify(array,length,largest);
 
         }
-
-
 
     }
 

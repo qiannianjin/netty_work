@@ -110,5 +110,11 @@ public class Day2 {
     //一句话总结到底，java的全部功能都是有java的本地接口方法来实现的
     //通过native关键字来映射和匹配jdk的预先写好的c或C++的文件
 
+//
+//    public static void main(String[] args) {
+//
+//    }
+
+
 
 }

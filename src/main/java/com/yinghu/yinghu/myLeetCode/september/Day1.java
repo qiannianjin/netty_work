@@ -107,7 +107,6 @@ public class Day1 {
 
         }
 
-
         return String.valueOf(chars);
     }
 

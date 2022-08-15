@@ -5,6 +5,17 @@ import java.util.LinkedList;
 
 public class User implements Serializable {
     public User(String zhang, int i, Object male) {
+
+        LinkedList linkedList=new LinkedList();
+
+
+
+
+
+
+
+
+
     }
 
     public static void main(String[] args) {

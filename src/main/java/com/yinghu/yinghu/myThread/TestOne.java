@@ -1,7 +1,6 @@
 package com.yinghu.yinghu.myThread;
 
 
-import org.openjdk.jol.info.ClassLayout;
 import org.springframework.web.context.request.ServletRequestAttributes;
 
 import javax.servlet.http.HttpServletRequest;
@@ -9,12 +8,10 @@ import java.io.IOException;
 import java.net.HttpURLConnection;
 import java.net.Socket;
 import java.net.URL;
-import java.sql.PreparedStatement;
 import java.util.AbstractQueue;
 import java.util.Collection;
 import java.util.Iterator;
 import java.util.concurrent.CountDownLatch;
-import java.util.concurrent.SynchronousQueue;
 
 public class TestOne {
 

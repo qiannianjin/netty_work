@@ -1,4 +1,4 @@
-package com.yinghu.yinghu.java8;
+package java8;
 
 import java.util.*;
 import java.util.stream.Collectors;

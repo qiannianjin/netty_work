@@ -3,14 +3,10 @@ package com.yinghu.yinghu.mynetty;
 import io.netty.bootstrap.ServerBootstrap;
 import io.netty.buffer.ByteBuf;
 import io.netty.buffer.Unpooled;
-import io.netty.channel.ChannelInitializer;
 import io.netty.channel.EventLoopGroup;
 import io.netty.channel.oio.OioEventLoopGroup;
-import io.netty.channel.socket.oio.OioServerSocketChannel;
-import jdk.internal.org.objectweb.asm.tree.TryCatchBlockNode;
 
-import java.net.InetSocketAddress;
-import java.nio.charset.Charset;
+import java.nio.charset.StandardCharsets;
 
 /**
  * @author
@@ -23,7 +19,7 @@ public class NettyOioServer {
 
 
         final ByteBuf buf = Unpooled.unreleasableBuffer(
-                Unpooled.copiedBuffer("Hi!\r\n", Charset.forName("UTF-8"))
+                Unpooled.copiedBuffer("Hi!\r\n", StandardCharsets.UTF_8)
         );
         //创建阻塞循环事件组
         EventLoopGroup group = new OioEventLoopGroup();
@@ -31,17 +27,14 @@ public class NettyOioServer {
         try {
             //
             ServerBootstrap b = new ServerBootstrap();
-           // b.group(group)
-                    //允许使用阻塞模式
-                    //.channel(OioServerSocketChannel.class)
-                    //.localAddress(new InetSocketAddress(port))
-                    //.childHandler(new ChannelInitializer<>() {
-                    //}
-                   // );
+            // b.group(group)
+            //允许使用阻塞模式
+            //.channel(OioServerSocketChannel.class)
+            //.localAddress(new InetSocketAddress(port))
+            //.childHandler(new ChannelInitializer<>() {
+            //}
+            // );
         } catch (Exception e) {
-
-
-
 
 
         }

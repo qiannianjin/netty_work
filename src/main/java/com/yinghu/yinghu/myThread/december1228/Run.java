@@ -1,5 +1,6 @@
 package com.yinghu.yinghu.myThread.december1228;
 
+@SuppressWarnings("checkstyle:Indentation")
 public class Run {
     public static void main(String[] args) {
         HasSelfPrivateNum hasSelfPrivateNum=new HasSelfPrivateNum();

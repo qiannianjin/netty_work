@@ -1,8 +1,10 @@
 package com.yinghu.yinghu.myThread.december1228;
 
 //@SuppressWarnings("all")
+@SuppressWarnings("CheckStyle")
 public class HasSelfPrivateNum {
 
+    @SuppressWarnings("checkstyle:Indentation")
     public void addI(String username) {
 
         try {
@@ -22,9 +24,5 @@ public class HasSelfPrivateNum {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-
-
     }
-
-
 }

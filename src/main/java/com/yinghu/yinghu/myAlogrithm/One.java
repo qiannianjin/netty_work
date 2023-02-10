@@ -94,4 +94,29 @@ public class One {
     }
 
 
+    public static void change(String[] args) {
+        int minValue = Integer.MIN_VALUE;
+        int maxValue = Integer.MAX_VALUE;
+
+        int a=7;
+        int b=10;
+        System.out.println(a/b);
+
+
+    }
+
+    public static void main(String[] args) {
+        int a = 0%10;
+        System.out.println("a = " + a);
+        String k ="12345";
+        String substring = k.substring(0, 3);
+        System.out.println("substring = " + substring);
+        //One.change(null);
+
+    }
+
+
+
+
+
 }

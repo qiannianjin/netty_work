@@ -20,8 +20,9 @@ public class InnerClass {
 
 
     }
-
-
+    //如果你不经常用，你就会忘记
+    //内部类有什么好处，有什么特点
+    //
  /**
   * @description:
   * @author: whz

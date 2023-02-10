@@ -21,7 +21,7 @@ public class MyByteBuffTest {
 //
 //}
     //控制流，多线程处理，并发
-    EventLoopGroup eventLoopGroup ;
+    EventLoopGroup eventLoopGroup;
     //socket
     Channel channel;
     //异步通知

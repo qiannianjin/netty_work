@@ -1,0 +1,29 @@
+[22:16:39:616] [INFO] - org.springframework.boot.StartupInfoLogger.logStarting(StartupInfoLogger.java:55) - Starting YinghuApplication on DESKTOP-G6MCSIN with PID 15624 (D:\后端项目\netty\netty_work\target\classes started by whz in D:\后端项目\netty\netty_work)
+[22:16:39:625] [INFO] - org.springframework.boot.SpringApplication.logStartupProfileInfo(SpringApplication.java:651) - No active profile set, falling back to default profiles: default
+[22:16:40:148] [INFO] - org.springframework.data.repository.config.RepositoryConfigurationDelegate.multipleStoresDetected(RepositoryConfigurationDelegate.java:249) - Multiple Spring Data modules found, entering strict repository configuration mode!
+[22:16:40:152] [INFO] - org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn(RepositoryConfigurationDelegate.java:127) - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+[22:16:40:191] [INFO] - org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn(RepositoryConfigurationDelegate.java:187) - Finished Spring Data repository scanning in 25ms. Found 0 Redis repository interfaces.
+[22:16:40:500] [INFO] - org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:108) - Tomcat initialized with port(s): 8080 (http)
+[22:16:40:506] [INFO] - org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173) - Initializing ProtocolHandler ["http-nio-8080"]
+[22:16:40:506] [INFO] - org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173) - Starting service [Tomcat]
+[22:16:40:507] [INFO] - org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173) - Starting Servlet engine: [Apache Tomcat/9.0.37]
+[22:16:40:579] [INFO] - org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173) - Initializing Spring embedded WebApplicationContext
+[22:16:40:579] [INFO] - org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.prepareWebApplicationContext(ServletWebServerApplicationContext.java:285) - Root WebApplicationContext: initialization completed in 881 ms
+[22:16:41:265] [INFO] - org.springframework.scheduling.concurrent.ExecutorConfigurationSupport.initialize(ExecutorConfigurationSupport.java:181) - Initializing ExecutorService 'applicationTaskExecutor'
+[22:16:41:424] [INFO] - org.springframework.scheduling.concurrent.ExecutorConfigurationSupport.initialize(ExecutorConfigurationSupport.java:181) - Initializing ExecutorService 'taskScheduler'
+[22:16:41:487] [INFO] - org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173) - Starting ProtocolHandler ["http-nio-8080"]
+[22:16:41:503] [INFO] - org.springframework.boot.web.embedded.tomcat.TomcatWebServer.start(TomcatWebServer.java:220) - Tomcat started on port(s): 8080 (http) with context path ''
+[22:16:41:505] [INFO] - org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.connectAddresses(AbstractConnectionFactory.java:558) - Attempting to connect to: [175.178.228.190:5672]
+[22:16:41:560] [INFO] - org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.createBareConnection(AbstractConnectionFactory.java:511) - Created new connection: rabbitConnectionFactory#164a62bf:0/SimpleConnection@630390b9 [delegate=amqp://admin@175.178.228.190:5672/, localPort= 52350]
+[22:16:41:667] [INFO] - com.yinghu.yinghu.myscheduling.Myschedule.writLog(Myschedule.java:20) - 怎么说com.yinghu.yinghu.myscheduling.Myschedule2023-04-26T22:16:41.667+0800
+[22:16:41:672] [INFO] - org.springframework.boot.StartupInfoLogger.logStarted(StartupInfoLogger.java:61) - Started YinghuApplication in 2.338 seconds (JVM running for 3.398)
+[22:16:44:683] [INFO] - com.yinghu.yinghu.myscheduling.Myschedule.writLog(Myschedule.java:20) - 怎么说com.yinghu.yinghu.myscheduling.Myschedule2023-04-26T22:16:44.683+0800
+[22:16:47:689] [INFO] - com.yinghu.yinghu.myscheduling.Myschedule.writLog(Myschedule.java:20) - 怎么说com.yinghu.yinghu.myscheduling.Myschedule2023-04-26T22:16:47.689+0800
+[22:16:50:704] [INFO] - com.yinghu.yinghu.myscheduling.Myschedule.writLog(Myschedule.java:20) - 怎么说com.yinghu.yinghu.myscheduling.Myschedule2023-04-26T22:16:50.704+0800
+[22:16:53:715] [INFO] - com.yinghu.yinghu.myscheduling.Myschedule.writLog(Myschedule.java:20) - 怎么说com.yinghu.yinghu.myscheduling.Myschedule2023-04-26T22:16:53.715+0800
+[22:16:56:723] [INFO] - com.yinghu.yinghu.myscheduling.Myschedule.writLog(Myschedule.java:20) - 怎么说com.yinghu.yinghu.myscheduling.Myschedule2023-04-26T22:16:56.723+0800
+[22:16:57:157] [INFO] - org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer.doShutdown(SimpleMessageListenerContainer.java:647) - Waiting for workers to finish.
+[22:16:57:797] [INFO] - org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer.doShutdown(SimpleMessageListenerContainer.java:650) - Successfully waited for workers to finish.
+[22:16:57:949] [INFO] - org.springframework.scheduling.concurrent.ExecutorConfigurationSupport.shutdown(ExecutorConfigurationSupport.java:218) - Shutting down ExecutorService 'taskScheduler'
+[22:16:57:950] [INFO] - org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.shutdown(AbstractMessageListenerContainer.java:1243) - Shutdown ignored - container is not active already
+[22:16:57:950] [INFO] - org.springframework.scheduling.concurrent.ExecutorConfigurationSupport.shutdown(ExecutorConfigurationSupport.java:218) - Shutting down ExecutorService 'applicationTaskExecutor'

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.yinghu.yinghu.sqlTest.dao.CategoryDao">
+
+    <resultMap type="com.yinghu.yinghu.sqlTest.entity.Category" id="CategoryMap">
+        <result property="id" column="id" jdbcType="INTEGER"/>
+        <result property="pid" column="pid" jdbcType="INTEGER"/>
+        <result property="name" column="name" jdbcType="VARCHAR"/>
+        <result property="level" column="level" jdbcType="INTEGER"/>
+        <result property="status" column="status" jdbcType="INTEGER"/>
+        <result property="createdAt" column="created_at" jdbcType="TIMESTAMP"/>
+        <result property="updatedAt" column="updated_at" jdbcType="TIMESTAMP"/>
+
+    </resultMap>
+
+    <!-- 批量插入 -->
+    <insert id="insertBatch" keyProperty="id" useGeneratedKeys="true">
+        insert into my_user.category(pid, name, level, status, created_at, updated_at)
+        values
+        <foreach collection="entities" item="entity" separator=",">
+            (#{entity.pid}, #{entity.name}, #{entity.level}, #{entity.status}, #{entity.createdAt}, #{entity.updatedAt})
+        </foreach>
+    </insert>
+    <!-- 批量插入或按主键更新 -->
+    <insert id="insertOrUpdateBatch" keyProperty="id" useGeneratedKeys="true">
+        insert into my_user.category(pid, name, level, status, created_at, updated_at)
+        values
+        <foreach collection="entities" item="entity" separator=",">
+            (#{entity.pid}, #{entity.name}, #{entity.level}, #{entity.status}, #{entity.createdAt}, #{entity.updatedAt})
+        </foreach>
+        on duplicate key update
+        pid = values(pid) , name = values(name) , level = values(level) , status = values(status) , created_at =
+        values(created_at) , updated_at = values(updated_at)
+    </insert>
+<!--    一般复杂的select-->
+<!--    <resultMap id="listUserMap" type="com/yinghu/yinghu/sqlTest/entity/Category">-->
+<!--        <collection property="list" ofType="com/yinghu/yinghu/sqlTest/entity/Category">-->
+<!--            <id property="id" column="user_id" />-->
+<!--            <result property="name" column="user_name"/>-->
+<!--            <result property="age" column="user_age"/>-->
+<!--        </collection>-->
+<!--    </resultMap>-->
+
+<!--    <select id="selectList" resultMap="listUserMap">-->
+<!--        SELECT * FROM user-->
+<!--    </select>-->
+
+<!--    <select id="selectName" resultType="String"></select>-->
+
+
+</mapper>
+

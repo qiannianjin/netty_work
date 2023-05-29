@@ -1,2 +1,38 @@
 logging:
-  config: log4j2.xml
+  config: classpath:log4j2.xml
+spring:
+  rabbitmq:
+    addresses: 175.178.228.190:5672
+    password: admin
+    username: admin
+  redis:
+    host: 8.136.140.60
+    port: 6379
+    database: 0
+    password: 123456
+    # 连接超时时间（毫秒）
+    timeout: 10000
+    # lettuce 参数
+    lettuce:
+      pool:
+        # 最大连接数(使用负值表示没有限制) 默认为 8
+        max-active: 10
+        # 最大阻塞等待时间(使用负值表示没有限制) 默认为 -1 ms
+        max-wait: -1
+        # 最大空闲连接 默认为 8
+        max-idle: 5
+        # 最小空闲连接 默认为 0
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    type: com.zaxxer.hikari.HikariDataSource
+    #    url: jdbc:mysql://localhost:3306/sbvue?useUnicode=true&characterEncoding=utf-8&useSSL=true
+    url: jdbc:mysql://rm-bp16j0050w5209878no.mysql.rds.aliyuncs.com:3306/my_user?useUnicode=true&characterEncoding=utf-8&useSSL=true
+    username: super_fruit
+    password: whz123whz!
+
+
+
+#  jms:
+#    pub-sub-domain:false
+#消息模式 true:广播(Topic)，false:队列(Queue),默认时false
+#spring.jms.pub-sub-domain=true

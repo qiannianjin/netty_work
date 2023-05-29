@@ -17,7 +17,9 @@ public class Mutex implements Lock {
         protected boolean isHeldExclusive (){
             return getState()==1;
         }
-        //
+        //尝试获取同步状态
+        //例子，方法栈，全部的线程公用这一个对象的方法栈，
+        //但是很多个线程去获取同步状态，
         public boolean tryAcquire(int acquire){
             if(compareAndSetState(0,1)){
                 //没有进行重写，而是调用
@@ -26,8 +28,10 @@ public class Mutex implements Lock {
             }
             return false;
         }
+        //尝试
         protected boolean tryRelease(int release){
             if(getState()==0) throw new IllegalMonitorStateException();
+            //如果这个getState是0，那就证明，这个同步状态并不是当前线程拥有，那就谈不上什么操作之类的。
             setExclusiveOwnerThread(null);
             setState(0);
             return true;
@@ -35,6 +39,8 @@ public class Mutex implements Lock {
         Condition newCondition() {return new ConditionObject();}
     }
 
+
+    //这一步在创建锁的时候才执行一次，调用锁的方法啊的时候不会执行。
     private final Syn syn=new Syn();
 
     //需要重写6个方法
@@ -70,8 +76,13 @@ public class Mutex implements Lock {
 
     public static void main(String[] args) {
         Mutex lock = new Mutex();
+
+        //弄个多线程的线程池来跑
+
+
         lock.tryLock();
 
+        lock.unlock();
 
         System.out.println("你好");
     }

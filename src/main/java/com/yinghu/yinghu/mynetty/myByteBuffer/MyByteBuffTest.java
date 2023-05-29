@@ -45,5 +45,25 @@ public class MyByteBuffTest {
 
     }
 
+    //8种基本数据类型
+    //
+    public void test(){
+
+        Integer integer = new Integer(1);
+        Long l = new Long(1);
+        Short s = new Short((short) 1);
+        Byte b= new Byte((byte) 1);
+
+
+
+
+
+
+
+
+    }
+
+
+
 
 }

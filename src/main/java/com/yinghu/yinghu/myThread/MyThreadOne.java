@@ -1,5 +1,7 @@
 package com.yinghu.yinghu.myThread;
 
+import java.util.concurrent.ThreadPoolExecutor;
+
 public class MyThreadOne extends Thread{
 
 
@@ -9,11 +11,18 @@ public class MyThreadOne extends Thread{
 
         public static void main(String[] args) {
 
-                MyThreadOne myThreadOne= (MyThreadOne) new Thread();
+                //MyThreadOne myThreadOne= (MyThreadOne) new Thread();
+                //
+                //System.out.println(
+                //        myThreadOne.getName()
+                //);
+                //
+                //new ThreadPoolExecutor();
 
-                System.out.println(
-                        myThreadOne.getName()
-                );
+
+
+
+
 
 
 

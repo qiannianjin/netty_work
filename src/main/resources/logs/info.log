@@ -1,0 +1,62 @@
+[00:44:18:954] [INFO] [] [logStarting] - org.springframework.boot.StartupInfoLogger.logStarting(StartupInfoLogger.java:55) - Starting YinghuApplication on DESKTOP-G6MCSIN with PID 14012 (D:\后端项目\netty\netty_work\target\classes started by whz in D:\后端项目\netty\netty_work)
+[00:44:18:969] [INFO] [] [logStartupProfileInfo] - org.springframework.boot.SpringApplication.logStartupProfileInfo(SpringApplication.java:651) - No active profile set, falling back to default profiles: default
+[00:44:19:035] [WARN] [] [warn] - org.springframework.core.log.CompositeLog.warn(CompositeLog.java:127) - For Jackson Kotlin classes support please add "com.fasterxml.jackson.module:jackson-module-kotlin" to the classpath
+[00:44:19:662] [INFO] [] [multipleStoresDetected] - org.springframework.data.repository.config.RepositoryConfigurationDelegate.multipleStoresDetected(RepositoryConfigurationDelegate.java:249) - Multiple Spring Data modules found, entering strict repository configuration mode!
+[00:44:19:664] [INFO] [] [registerRepositoriesIn] - org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn(RepositoryConfigurationDelegate.java:127) - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+[00:44:19:705] [INFO] [] [registerRepositoriesIn] - org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn(RepositoryConfigurationDelegate.java:187) - Finished Spring Data repository scanning in 26ms. Found 0 Redis repository interfaces.
+[00:44:20:176] [INFO] [] [initialize] - org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:108) - Tomcat initialized with port(s): 8080 (http)
+[00:44:20:182] [INFO] [] [log] - org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173) - Initializing ProtocolHandler ["http-nio-8080"]
+[00:44:20:183] [INFO] [] [log] - org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173) - Starting service [Tomcat]
+[00:44:20:183] [INFO] [] [log] - org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173) - Starting Servlet engine: [Apache Tomcat/9.0.37]
+[00:44:20:263] [INFO] [] [log] - org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173) - Initializing Spring embedded WebApplicationContext
+[00:44:20:263] [INFO] [] [prepareWebApplicationContext] - org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.prepareWebApplicationContext(ServletWebServerApplicationContext.java:285) - Root WebApplicationContext: initialization completed in 1225 ms
+[00:44:21:676] [INFO] [] [initialize] - org.springframework.scheduling.concurrent.ExecutorConfigurationSupport.initialize(ExecutorConfigurationSupport.java:181) - Initializing ExecutorService 'applicationTaskExecutor'
+[00:44:21:906] [INFO] [] [initialize] - org.springframework.scheduling.concurrent.ExecutorConfigurationSupport.initialize(ExecutorConfigurationSupport.java:181) - Initializing ExecutorService 'taskScheduler'
+[00:44:21:993] [INFO] [] [log] - org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173) - Starting ProtocolHandler ["http-nio-8080"]
+[00:44:22:013] [INFO] [] [start] - org.springframework.boot.web.embedded.tomcat.TomcatWebServer.start(TomcatWebServer.java:220) - Tomcat started on port(s): 8080 (http) with context path ''
+[00:44:22:016] [INFO] [] [connectAddresses] - org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.connectAddresses(AbstractConnectionFactory.java:558) - Attempting to connect to: [175.178.228.190:5672]
+[00:44:22:084] [INFO] [] [createBareConnection] - org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.createBareConnection(AbstractConnectionFactory.java:511) - Created new connection: rabbitConnectionFactory#29eda4f8:0/SimpleConnection@69364b2d [delegate=amqp://admin@175.178.228.190:5672/, localPort= 57053]
+[00:44:22:175] [INFO] [] [logStarted] - org.springframework.boot.StartupInfoLogger.logStarted(StartupInfoLogger.java:61) - Started YinghuApplication in 3.536 seconds (JVM running for 4.675)
+[00:44:25:077] [INFO] [] [log] - org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173) - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[00:44:25:078] [INFO] [] [initServletBean] - org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:525) - Initializing Servlet 'dispatcherServlet'
+[00:44:25:086] [INFO] [] [initServletBean] - org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:547) - Completed initialization in 8 ms
+[00:44:25:166] [INFO] [5fb91074-7ca7-43ca-afb0-fc74cec26867] [getConnection] - com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:110) - HikariPool-1 - Starting...
+[00:44:25:516] [INFO] [5fb91074-7ca7-43ca-afb0-fc74cec26867] [getConnection] - com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:123) - HikariPool-1 - Start completed.
+[00:44:28:297] [INFO] [] [doShutdown] - org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer.doShutdown(SimpleMessageListenerContainer.java:647) - Waiting for workers to finish.
+[00:44:29:256] [INFO] [] [doShutdown] - org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer.doShutdown(SimpleMessageListenerContainer.java:650) - Successfully waited for workers to finish.
+[00:44:29:475] [INFO] [] [shutdown] - org.springframework.scheduling.concurrent.ExecutorConfigurationSupport.shutdown(ExecutorConfigurationSupport.java:218) - Shutting down ExecutorService 'taskScheduler'
+[00:44:29:476] [INFO] [] [shutdown] - org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.shutdown(AbstractMessageListenerContainer.java:1243) - Shutdown ignored - container is not active already
+[00:44:29:476] [INFO] [] [shutdown] - org.springframework.scheduling.concurrent.ExecutorConfigurationSupport.shutdown(ExecutorConfigurationSupport.java:218) - Shutting down ExecutorService 'applicationTaskExecutor'
+[00:44:29:476] [INFO] [] [close] - com.zaxxer.hikari.HikariDataSource.close(HikariDataSource.java:350) - HikariPool-1 - Shutdown initiated...
+[00:44:29:486] [INFO] [] [close] - com.zaxxer.hikari.HikariDataSource.close(HikariDataSource.java:352) - HikariPool-1 - Shutdown completed.
+[00:51:38:971] [INFO] [] [logStarting] - org.springframework.boot.StartupInfoLogger.logStarting(StartupInfoLogger.java:55) - Starting YinghuApplication on DESKTOP-G6MCSIN with PID 15872 (D:\后端项目\netty\netty_work\target\classes started by whz in D:\后端项目\netty\netty_work)
+[00:51:38:980] [INFO] [] [logStartupProfileInfo] - org.springframework.boot.SpringApplication.logStartupProfileInfo(SpringApplication.java:651) - No active profile set, falling back to default profiles: default
+[00:51:39:070] [WARN] [] [warn] - org.springframework.core.log.CompositeLog.warn(CompositeLog.java:127) - For Jackson Kotlin classes support please add "com.fasterxml.jackson.module:jackson-module-kotlin" to the classpath
+[00:51:39:744] [INFO] [] [multipleStoresDetected] - org.springframework.data.repository.config.RepositoryConfigurationDelegate.multipleStoresDetected(RepositoryConfigurationDelegate.java:249) - Multiple Spring Data modules found, entering strict repository configuration mode!
+[00:51:39:746] [INFO] [] [registerRepositoriesIn] - org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn(RepositoryConfigurationDelegate.java:127) - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+[00:51:39:785] [INFO] [] [registerRepositoriesIn] - org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn(RepositoryConfigurationDelegate.java:187) - Finished Spring Data repository scanning in 25ms. Found 0 Redis repository interfaces.
+[00:51:40:262] [INFO] [] [initialize] - org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:108) - Tomcat initialized with port(s): 8080 (http)
+[00:51:40:270] [INFO] [] [log] - org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173) - Initializing ProtocolHandler ["http-nio-8080"]
+[00:51:40:270] [INFO] [] [log] - org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173) - Starting service [Tomcat]
+[00:51:40:271] [INFO] [] [log] - org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173) - Starting Servlet engine: [Apache Tomcat/9.0.37]
+[00:51:40:350] [INFO] [] [log] - org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173) - Initializing Spring embedded WebApplicationContext
+[00:51:40:351] [INFO] [] [prepareWebApplicationContext] - org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.prepareWebApplicationContext(ServletWebServerApplicationContext.java:285) - Root WebApplicationContext: initialization completed in 1289 ms
+[00:51:41:787] [INFO] [] [initialize] - org.springframework.scheduling.concurrent.ExecutorConfigurationSupport.initialize(ExecutorConfigurationSupport.java:181) - Initializing ExecutorService 'applicationTaskExecutor'
+[00:51:41:997] [INFO] [] [initialize] - org.springframework.scheduling.concurrent.ExecutorConfigurationSupport.initialize(ExecutorConfigurationSupport.java:181) - Initializing ExecutorService 'taskScheduler'
+[00:51:42:069] [INFO] [] [log] - org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173) - Starting ProtocolHandler ["http-nio-8080"]
+[00:51:42:088] [INFO] [] [start] - org.springframework.boot.web.embedded.tomcat.TomcatWebServer.start(TomcatWebServer.java:220) - Tomcat started on port(s): 8080 (http) with context path ''
+[00:51:42:090] [INFO] [] [connectAddresses] - org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.connectAddresses(AbstractConnectionFactory.java:558) - Attempting to connect to: [175.178.228.190:5672]
+[00:51:42:147] [INFO] [] [createBareConnection] - org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.createBareConnection(AbstractConnectionFactory.java:511) - Created new connection: rabbitConnectionFactory#6d303498:0/SimpleConnection@4e0cc334 [delegate=amqp://admin@175.178.228.190:5672/, localPort= 57617]
+[00:51:42:226] [INFO] [] [logStarted] - org.springframework.boot.StartupInfoLogger.logStarted(StartupInfoLogger.java:61) - Started YinghuApplication in 3.663 seconds (JVM running for 4.713)
+[00:51:45:080] [INFO] [] [log] - org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173) - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[00:51:45:080] [INFO] [] [initServletBean] - org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:525) - Initializing Servlet 'dispatcherServlet'
+[00:51:45:085] [INFO] [] [initServletBean] - org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:547) - Completed initialization in 5 ms
+[00:51:45:173] [INFO] [a778c061-0497-4b59-bac5-a8077365c2bb] [getConnection] - com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:110) - HikariPool-1 - Starting...
+[00:51:45:718] [INFO] [a778c061-0497-4b59-bac5-a8077365c2bb] [getConnection] - com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:123) - HikariPool-1 - Start completed.
+[00:51:48:535] [INFO] [] [doShutdown] - org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer.doShutdown(SimpleMessageListenerContainer.java:647) - Waiting for workers to finish.
+[00:51:49:275] [INFO] [] [doShutdown] - org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer.doShutdown(SimpleMessageListenerContainer.java:650) - Successfully waited for workers to finish.
+[00:51:49:606] [INFO] [] [shutdown] - org.springframework.scheduling.concurrent.ExecutorConfigurationSupport.shutdown(ExecutorConfigurationSupport.java:218) - Shutting down ExecutorService 'taskScheduler'
+[00:51:49:607] [INFO] [] [shutdown] - org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.shutdown(AbstractMessageListenerContainer.java:1243) - Shutdown ignored - container is not active already
+[00:51:49:608] [INFO] [] [shutdown] - org.springframework.scheduling.concurrent.ExecutorConfigurationSupport.shutdown(ExecutorConfigurationSupport.java:218) - Shutting down ExecutorService 'applicationTaskExecutor'
+[00:51:49:608] [INFO] [] [close] - com.zaxxer.hikari.HikariDataSource.close(HikariDataSource.java:350) - HikariPool-1 - Shutdown initiated...
+[00:51:49:616] [INFO] [] [close] - com.zaxxer.hikari.HikariDataSource.close(HikariDataSource.java:352) - HikariPool-1 - Shutdown completed.

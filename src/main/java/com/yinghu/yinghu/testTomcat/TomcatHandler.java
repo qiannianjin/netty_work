@@ -2,7 +2,7 @@ package com.yinghu.yinghu.testTomcat;
 
 import io.netty.channel.ChannelHandler;
 import io.netty.channel.ChannelHandlerContext;
-import io.netty.channel.ChannelHandlerInvoker;
+//import io.netty.channel.ChannelHandlerInvoker;
 import io.netty.channel.ChannelInboundHandlerAdapter;
 import io.netty.handler.codec.http.HttpRequest;
 import io.netty.util.concurrent.EventExecutorGroup;

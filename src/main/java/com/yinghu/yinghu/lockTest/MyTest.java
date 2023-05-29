@@ -1,5 +1,9 @@
 package com.yinghu.yinghu.lockTest;
 
+import java.util.concurrent.locks.Condition;
+import java.util.concurrent.locks.Lock;
+import java.util.concurrent.locks.ReentrantLock;
+
 /**
  * @创建人 whz
  * @创建时间 2023/1/1
@@ -16,8 +20,14 @@ public class MyTest {
     }
 
      public void test2(String[] args) {
-        MyTest myTest = new MyTest();
+         Lock lock = new ReentrantLock();
+         Condition condition = lock.newCondition();
+
+
+
+         MyTest myTest = new MyTest();
          A a = new A();
+
      }
 
 }

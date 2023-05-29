@@ -18,6 +18,7 @@ public class JdkMeipo implements InvocationHandler {
         this.target=target;
         Class<?> clazz=target.getClass();
         //最后一个参数为实现InvacationHandler的对象，本例中可以用this表示,只能是本身
+
         // 第一个为类加载器，第二个为返回的类型（可以时接口，也可以是类）.
         return (IPerson) Proxy.newProxyInstance(clazz.getClassLoader(),clazz.getInterfaces(),this);
     }

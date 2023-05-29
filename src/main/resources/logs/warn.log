@@ -1,0 +1,2 @@
+[00:44:19:035] [WARN] [warn] - org.springframework.core.log.CompositeLog.warn(CompositeLog.java:127) - For Jackson Kotlin classes support please add "com.fasterxml.jackson.module:jackson-module-kotlin" to the classpath
+[00:51:39:070] [WARN] [warn] - org.springframework.core.log.CompositeLog.warn(CompositeLog.java:127) - For Jackson Kotlin classes support please add "com.fasterxml.jackson.module:jackson-module-kotlin" to the classpath

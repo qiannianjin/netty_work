@@ -45,7 +45,7 @@
         <dependency>
             <groupId>io.netty</groupId>
             <artifactId>netty-all</artifactId>
-            <version>5.0.0.Alpha2</version>
+            <version>4.1.53.Final</version>
         </dependency>
 
         <!-- https://mvnrepository.com/artifact/org.aspectj/aspectjweaver -->
@@ -71,7 +71,7 @@
 
         </dependency>
 
-<!--        apache系列的包-->
+        <!--        apache系列的包-->
         <!-- https://mvnrepository.com/artifact/commons-io/commons-io -->
         <dependency>
             <groupId>commons-io</groupId>
@@ -97,8 +97,27 @@
             <artifactId>httpclient</artifactId>
             <version>4.5.13</version>
         </dependency>
+        <!--        消息队列-->
+        <!--        <dependency>-->
+        <!--        <groupId>org.springframework.boot</groupId>-->
+        <!--        <artifactId>spring-boot-starter-activemq</artifactId>-->
+        <!--    </dependency>-->
 
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-amqp</artifactId>
+        </dependency>
 
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-redis</artifactId>
+        </dependency>
+        <!-- spring2.X集成redis所需common-pool2-->
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-pool2</artifactId>
+            <version>2.6.0</version>
+        </dependency>
 
 
         <dependency>
@@ -112,56 +131,107 @@
             <artifactId>poi-ooxml</artifactId>
             <version>3.9</version>
         </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-log4j2</artifactId>
-        </dependency>
+
         <dependency>
             <groupId>commons-httpclient</groupId>
             <artifactId>commons-httpclient</artifactId>
             <version>3.1</version>
         </dependency>
+        <dependency>
+            <groupId>com.baomidou</groupId>
+            <artifactId>mybatis-plus-boot-starter</artifactId>
+            <version>3.5.2</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.baomidou</groupId>
+            <artifactId>mybatis-plus-generator</artifactId>
+            <version>3.5.1</version>
+        </dependency>
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>8.0.29</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-jdbc</artifactId>
+            <version>2.7.4</version>
+        </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-log4j2</artifactId>
+        </dependency>
+
 
     </dependencies>
 
     <build>
+        <resources>
+            <resource>
+                <directory>src/main/resources/</directory>
+                <filtering>true</filtering>
+                <includes>
+                    <include>**/*.yml</include>
+                </includes>
+            </resource>
+            <resource>
+                <directory>src/main/resources/</directory>
+                <filtering>false</filtering>
+                <includes>
+                    <include>**/*.xml</include>
+                </includes>
+            </resource>
+        </resources>
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+
+                    <configuration>
+                        <includeSystemScope>true</includeSystemScope>
+                    </configuration>
+
             </plugin>
-<!--            &lt;!&ndash;检查代码编码规范,不符合规范将无法打包&ndash;&gt;-->
-<!--            <plugin>-->
-<!--                <groupId>org.apache.maven.plugins</groupId>-->
-<!--                <artifactId>maven-checkstyle-plugin</artifactId>-->
-<!--                <version>3.1.2</version>-->
-<!--                <dependencies>-->
-<!--                    <dependency>-->
-<!--                        <groupId>com.puppycrawl.tools</groupId>-->
-<!--                        <artifactId>checkstyle</artifactId>-->
-<!--                        &lt;!&ndash; 上线项目中可能会换为${maven-checkstyle-plugin-version}&ndash;&gt;-->
-<!--                        <version>8.36.2</version>-->
-<!--                    </dependency>-->
-<!--                </dependencies>-->
-<!--                <executions>-->
-<!--                    <execution>-->
-<!--                        <id>checkstyle-validation</id>-->
-<!--                        <phase>compile</phase>-->
-<!--                        <configuration>-->
-<!--                            &lt;!&ndash; 此处是checkstyle.xml文件放置位置，可根据实际位置进行修改&ndash;&gt;-->
-<!--                            <configLocation>src/main/resources/checkStyle.xml</configLocation>-->
-<!--                            <encoding>UTF-8</encoding>-->
-<!--                            <consoleOutput>true</consoleOutput>-->
-<!--                            <failOnViolation>true</failOnViolation>-->
-<!--                        </configuration>-->
-<!--                        <goals>-->
-<!--                            <goal>check</goal>-->
-<!--                        </goals>-->
-<!--                    </execution>-->
-<!--                </executions>-->
-<!--            </plugin>-->
+
+            <!--            &lt;!&ndash;检查代码编码规范,不符合规范将无法打包&ndash;&gt;-->
+            <!--            <plugin>-->
+            <!--                <groupId>org.apache.maven.plugins</groupId>-->
+            <!--                <artifactId>maven-checkstyle-plugin</artifactId>-->
+            <!--                <version>3.1.2</version>-->
+            <!--                <dependencies>-->
+            <!--                    <dependency>-->
+            <!--                        <groupId>com.puppycrawl.tools</groupId>-->
+            <!--                        <artifactId>checkstyle</artifactId>-->
+            <!--                        &lt;!&ndash; 上线项目中可能会换为${maven-checkstyle-plugin-version}&ndash;&gt;-->
+            <!--                        <version>8.36.2</version>-->
+            <!--                    </dependency>-->
+            <!--                </dependencies>-->
+            <!--                <executions>-->
+            <!--                    <execution>-->
+            <!--                        <id>checkstyle-validation</id>-->
+            <!--                        <phase>compile</phase>-->
+            <!--                        <configuration>-->
+            <!--                            &lt;!&ndash; 此处是checkstyle.xml文件放置位置，可根据实际位置进行修改&ndash;&gt;-->
+            <!--                            <configLocation>src/main/resources/checkStyle.xml</configLocation>-->
+            <!--                            <encoding>UTF-8</encoding>-->
+            <!--                            <consoleOutput>true</consoleOutput>-->
+            <!--                            <failOnViolation>true</failOnViolation>-->
+            <!--                        </configuration>-->
+            <!--                        <goals>-->
+            <!--                            <goal>check</goal>-->
+            <!--                        </goals>-->
+            <!--                    </execution>-->
+            <!--                </executions>-->
+            <!--            </plugin>-->
+
 
         </plugins>
     </build>
 
 </project>
+

@@ -6,7 +6,10 @@ import io.netty.buffer.Unpooled;
 import io.netty.channel.EventLoopGroup;
 import io.netty.channel.oio.OioEventLoopGroup;
 
+import javax.swing.text.html.Option;
 import java.nio.charset.StandardCharsets;
+import java.util.HashMap;
+import java.util.Optional;
 
 /**
  * @author
@@ -23,6 +26,23 @@ public class NettyOioServer {
         );
         //创建阻塞循环事件组
         EventLoopGroup group = new OioEventLoopGroup();
+
+        HashMap<Object, Object> map = new HashMap<>();
+
+        Optional<String> nameOpt = Optional.of("张三");
+        Optional<String> empty = Optional.empty();
+        String s = nameOpt.get();
+
+
+        String name = nameOpt.get();   // name = "张三"
+        String emptyName = empty.get(); // NoSuchElementException
+        String name1 = nameOpt.orElse("默认值");    // name = "张三"
+        String emptyName1 = empty.orElse("默认值"); // emptyName = "默认值"
+        String name2 = nameOpt.orElseGet(() -> "默认值");
+        nameOpt.ifPresent(name0 -> System.out.println(name));  // 打印张三
+        empty.ifPresent(name5 -> System.out.println(name));    // 不做任何操作
+        Optional<String> upperName = nameOpt.map(String::toUpperCase);
+        upperName.ifPresent(name6 -> System.out.println(name)); // 打印ZHANGSAN
 
         try {
             //

@@ -33,6 +33,10 @@ public class EchoClientHandler extends SimpleChannelInboundHandler<ByteBuf> {
                 .addListener(ChannelFutureListener.CLOSE);
     }
 
+    @Override
+    protected void channelRead0(ChannelHandlerContext ctx, ByteBuf msg) throws Exception {
+
+    }
 
 
     @Override
@@ -43,8 +47,8 @@ public class EchoClientHandler extends SimpleChannelInboundHandler<ByteBuf> {
     }
 
 
-    @Override
-    protected void messageReceived(ChannelHandlerContext channelHandlerContext, ByteBuf byteBuf) throws Exception {
-
-    }
+    //@Override
+    //protected void messageReceived(ChannelHandlerContext channelHandlerContext, ByteBuf byteBuf) throws Exception {
+    //
+    //}
 }

@@ -12,12 +12,12 @@ import java.util.Date;
 @Component
 public class Myschedule {
 
-    @Scheduled(fixedDelay = 3000)
+    //@Scheduled(fixedDelay = 3000)
     void writLog(){
         System.out.println("开始");
          Logger logger = LogManager.getLogger(Myschedule.class);
-         String hello = logger.getName();
-         logger.info("怎么说{}{}",hello, new Date());
+         String className = logger.getName();
+         logger.info("怎么说{}{}",className, new Date());
 
     }
 

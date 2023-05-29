@@ -34,3 +34,5 @@ build/
 
 ###gradle###
 .gradle/
+/src/main/resources/logs/
+/src/main/resources/schedulelogs/

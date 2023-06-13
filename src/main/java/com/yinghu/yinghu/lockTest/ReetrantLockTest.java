@@ -18,7 +18,7 @@ public class ReetrantLockTest {
 
   public  void test(String[] args) {
     Lock lock = new ReentrantLock();
-    lock.
+    //lock.
 
   }
 

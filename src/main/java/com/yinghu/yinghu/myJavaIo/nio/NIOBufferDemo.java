@@ -17,7 +17,7 @@ import java.nio.channels.FileChannel;
 public class NIOBufferDemo {
     public static void main(String[] args) throws IOException {
         int bufferSize =1024;
-        FileChannel src = new FileInputStream("D:\\source.txt").getChannel();
+        FileChannel src  = new FileInputStream("D:\\source.txt").getChannel();
         FileChannel dest = new FileOutputStream("D:\\dest.txt").getChannel();
         ByteBuffer buffer = ByteBuffer.allocate(bufferSize);
         //通过chanel逐行读取写进去buffer;
